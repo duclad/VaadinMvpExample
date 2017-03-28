@@ -1,14 +1,14 @@
 package net.duclad.vaadin.menu;
 
 
-import net.duclad.vaadin.ApplicationView;
-import net.duclad.vaadin.View;
+import net.duclad.vaadin.mvp.ApplicationView;
+import net.duclad.vaadin.ViewDetails;
 
 public interface ApplicationMenu extends ApplicationView<ApplicationMenuPresenter> {
 
 	void setMenuTitle(String title);
 
-	void addMenuItem(View view);
+	void addMenuItem(ViewDetails view);
 
-	void markMenuItemActive(View view);
+	void markMenuItemActive(ViewDetails view);
 }

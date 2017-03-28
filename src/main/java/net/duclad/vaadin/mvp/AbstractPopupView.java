@@ -1,4 +1,4 @@
-package net.duclad.vaadin;
+package net.duclad.vaadin.mvp;
 
 import com.vaadin.ui.UI;
 import com.vaadin.ui.Window;

@@ -1,17 +1,17 @@
 package net.duclad.vaadin.menu;
 
 
-import net.duclad.vaadin.View;
+import net.duclad.vaadin.mvp.AbstractView;
 
 public class NavigationEvent {
 
-	private final View target;
+	private final AbstractView target;
 
-	public NavigationEvent(View target) {
+	public NavigationEvent(AbstractView target) {
 		this.target = target;
 	}
 
-	public View getTarget() {
+	public AbstractView getTarget() {
 		return target;
 	}
 }

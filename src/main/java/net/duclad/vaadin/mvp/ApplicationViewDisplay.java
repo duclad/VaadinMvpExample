@@ -1,4 +1,4 @@
-package net.duclad.vaadin;
+package net.duclad.vaadin.mvp;
 
 import com.vaadin.devday.mvp.ui.menu.ApplicationMenu;
 import com.vaadin.navigator.View;

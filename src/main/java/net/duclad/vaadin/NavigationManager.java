@@ -10,6 +10,8 @@ import com.vaadin.spring.navigator.SpringViewProvider;
 import com.vaadin.ui.UI;
 import net.duclad.pet.ui.Views;
 import net.duclad.vaadin.menu.NavigationEvent;
+import net.duclad.vaadin.mvp.AbstractView;
+import net.duclad.vaadin.mvp.ApplicationViewDisplay;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
@@ -42,7 +44,7 @@ public class NavigationManager {
 		navigator.addProvider(viewProvider);
 	}
 
-	public void navigateTo(Views view) {
+	public void navigateTo(AbstractView view) {
 		eventPublished.publishEvent(new NavigationEvent(view));
 	}
 

@@ -1,4 +1,4 @@
-package net.duclad.vaadin;
+package net.duclad.vaadin.mvp;
 
 import com.vaadin.spring.annotation.SpringComponent;
 
@@ -45,7 +45,7 @@ public abstract class AbstractPresenter<V extends ApplicationView> {
      * user has navigated into the view that this presenter governs.
      */
     public void onViewEnter() {
-        Logger.getLogger(getClass().getSimpleName()).info("View entered");
+        Logger.getLogger(getClass().getSimpleName()).info("ViewDetails entered");
     }
 
     public void onViewExit() {

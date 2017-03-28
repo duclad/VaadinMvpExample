@@ -1,4 +1,4 @@
-package net.duclad.vaadin;
+package net.duclad.vaadin.mvp;
 
 public interface ApplicationView<P extends AbstractPresenter> {
 

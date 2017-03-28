@@ -2,7 +2,7 @@ package net.duclad.vaadin.menu;
 
 import com.vaadin.spring.annotation.SpringComponent;
 import com.vaadin.spring.annotation.UIScope;
-import net.duclad.vaadin.AbstractPresenter;
+import net.duclad.vaadin.mvp.AbstractPresenter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;

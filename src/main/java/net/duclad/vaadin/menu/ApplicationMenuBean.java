@@ -7,8 +7,8 @@ import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.themes.ValoTheme;
-import net.duclad.vaadin.AbstractView;
-import net.duclad.vaadin.View;
+import net.duclad.vaadin.mvp.AbstractView;
+import net.duclad.vaadin.ViewDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public class ApplicationMenuBean extends AbstractView<ApplicationMenuPresenter> 
 	private CssLayout menuLayout;
 	private Label menuTitle;
 
-	private Map<View, Button> menuItemMap;
+	private Map<ViewDetails, Button> menuItemMap;
 
 	public ApplicationMenuBean() {
 		setSizeFull();
@@ -48,7 +48,7 @@ public class ApplicationMenuBean extends AbstractView<ApplicationMenuPresenter> 
 	}
 
 	@Override
-	public void addMenuItem(View view) {
+	public void addMenuItem(ViewDetails view) {
 		Button menuItem = new Button(view.getName(), view.getIcon());
 		menuItem.setPrimaryStyleName(ValoTheme.MENU_ITEM);
 		menuItem.addClickListener(e -> getPresenter().onMenuItemClicked(view));
@@ -57,7 +57,7 @@ public class ApplicationMenuBean extends AbstractView<ApplicationMenuPresenter> 
 	}
 
 	@Override
-	public void markMenuItemActive(View view) {
+	public void markMenuItemActive(ViewDetails view) {
 		menuItemMap.values().forEach(i -> i.removeStyleName("selected"));
 
 		if (menuItemMap.containsKey(view)) {

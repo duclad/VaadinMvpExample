@@ -1,12 +1,11 @@
 package net.duclad.pet.ui;
 
-import com.vaadin.devday.mvp.ui.customer.CustomerViewBean;
-import com.vaadin.devday.mvp.ui.job.JobViewBean;
 import com.vaadin.navigator.View;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.server.Resource;
+import net.duclad.vaadin.ViewDetails;
 
-public enum Views implements net.duclad.vaadin.View{
+public enum Views implements ViewDetails {
 	CUSTOMER("Customers", FontAwesome.USERS, "", CustomerViewBean.class),
 	INVOICE("Invoices", FontAwesome.DOLLAR, "invoice", JobViewBean.class);
 
